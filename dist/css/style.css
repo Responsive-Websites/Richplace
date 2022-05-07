@@ -92,6 +92,10 @@ h6 {
   font-weight: inherit;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -124,6 +128,27 @@ h6 {
   flex-direction: column;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 120px 0px 50px 0px;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+}
+.header__link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
 .main-screen {
   flex: 1 1 100%;
   position: relative;
@@ -134,4 +159,11 @@ h6 {
   position: absolute;
   height: 100%;
   width: 100%;
+  filter: brightness(0.4);
+}
+.main-screen__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

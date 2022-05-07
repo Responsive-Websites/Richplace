@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 120px 0px 50px 0px;
+
+  &__inner {
+  }
+
+  &__nav {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    // padding: 0px 35px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
