@@ -130,16 +130,62 @@ body {
 
 .header {
   position: absolute;
-  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 100;
-  padding: 120px 0px 50px 0px;
+}
+@media screen and (max-width: 860px) {
+  .header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.header__nav {
+  padding-top: 50px;
+}
+@media screen and (min-height: 665px) {
+  .header__nav {
+    padding-top: 150px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .header__nav {
+    padding-top: 50px;
+    flex: 1 1 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+}
+.header__nav.active {
+  left: 0;
 }
 .header__list {
+  justify-content: center;
   display: flex;
-  justify-content: space-between;
+}
+@media screen and (max-width: 860px) {
+  .header__list {
+    flex-direction: column;
+  }
+}
+.header__item {
+  width: 200px;
+  text-align: center;
+  margin: 0px 15px;
+}
+@media screen and (max-width: 860px) {
+  .header__item {
+    width: auto;
+    margin: 30px 0px;
+  }
 }
 .header__link {
   color: #ffffff;
@@ -147,6 +193,64 @@ body {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 2px;
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 860px) {
+  .header__link {
+    color: rgb(87, 85, 85);
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+.header__icon {
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .header__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .header__icon span, .header__icon::before, .header__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #ffffff;
+  }
+  .header__icon::before, .header__icon::after {
+    content: "";
+  }
+  .header__icon::before {
+    top: 0;
+  }
+  .header__icon::after {
+    bottom: 0;
+  }
+  .header__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+}
+.header__icon.active span {
+  transform: scale(0) translate(0px, -50%);
+}
+.header__icon.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+  background-color: #000000;
+}
+.header__icon.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+  background-color: #000000;
 }
 
 .main-screen {
@@ -166,4 +270,84 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  max-width: 769px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-screen__logo img {
+  width: 100%;
+}
+@media screen and (max-height: 707px) {
+  .main-screen__logo img {
+    width: 70%;
+  }
+}
+@media screen and (max-height: 538px) {
+  .main-screen__logo img {
+    width: 50%;
+  }
+}
+@media screen and (max-height: 446px) {
+  .main-screen__logo img {
+    width: 30%;
+  }
+}
+@media screen and (max-height: 707px) {
+  .main-screen__logo {
+    top: 45%;
+  }
+}
+@media screen and (max-height: 446px) {
+  .main-screen__logo {
+    width: 30%;
+  }
+}
+.main-screen__text {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-size: 30px;
+  max-width: 940px;
+  padding: 0px 20px;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-height: 707px) {
+  .main-screen__text {
+    font-size: 26px;
+    max-width: 980px;
+  }
+}
+@media screen and (max-width: 707px) {
+  .main-screen__text {
+    font-size: 26px;
+    max-width: none;
+  }
+}
+@media screen and (max-height: 538px) {
+  .main-screen__text {
+    font-size: 24px;
+    max-width: 1020px;
+  }
+}
+@media screen and (max-width: 538px) {
+  .main-screen__text {
+    font-size: 24px;
+    max-width: none;
+  }
+}
+@media screen and (max-height: 446px) {
+  .main-screen__text {
+    font-size: 20px;
+    max-width: 1100px;
+  }
+}
+@media screen and (max-width: 446px) {
+  .main-screen__text {
+    font-size: 18px;
+    max-width: none;
+  }
 }

@@ -14,9 +14,9 @@ function ibg() {
 ibg();
 
 //burger
-const iconMenu = document.querySelector('.menu__icon');
+const iconMenu = document.querySelector('.header__icon');
 if (iconMenu) {
-  const menuBody = document.querySelector('.header__menu');
+  const menuBody = document.querySelector('.header__nav');
   iconMenu.addEventListener('click', function (e) {
     document.body.classList.toggle('lock');
     iconMenu.classList.toggle('active');
