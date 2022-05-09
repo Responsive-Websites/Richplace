@@ -3,6 +3,8 @@
   }
   &__enchantment {
   }
+  &__emotions {
+  }
 }
 
 .main-screen {
@@ -226,5 +228,91 @@
 .line {
   &_active {
     background-color: #bfae99;
+  }
+}
+
+.emotions {
+  &__body {
+    display: flex;
+
+    @media screen and (max-width: 920px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__column {
+    &:nth-child(1) {
+      flex: 0 1 17.857143%;
+      @media screen and (max-width: 1232px) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      flex: 0 1 32.142857%;
+      @media screen and (max-width: 1232px) {
+        flex: 0 1 50%;
+      }
+      @media screen and (max-width: 920px) {
+        flex: 1 1 100%;
+      }
+    }
+
+    &:nth-child(3) {
+      flex: 0 1 50%;
+      @media screen and (max-width: 920px) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 920px) {
+      padding-bottom: 40%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding: 54px 42px 80px 42px;
+
+    @media screen and (max-width: 980px) {
+      padding: 30px 30px 30px 30px;
+    }
+    @media screen and (max-width: 481px) {
+      padding: 15px 15px 25px 15px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    font-family: 'Playfair Display';
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+    @media screen and (max-width: 481px) {
+      font-size: 20px;
+      margin-bottom: 14px;
+      line-height: 25px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+
+    line-height: 20px;
+
+    @media screen and (max-width: 481px) {
+      font-size: 14px;
+    }
   }
 }

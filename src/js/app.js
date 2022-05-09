@@ -17,8 +17,9 @@ ibg();
 const iconMenu = document.querySelector('.header__icon');
 if (iconMenu) {
   const menuBody = document.querySelector('.header__nav');
+  const menuPage = document.querySelector('.page');
   iconMenu.addEventListener('click', function (e) {
-    document.body.classList.toggle('lock');
+    menuPage.classList.toggle('_lock');
     iconMenu.classList.toggle('active');
     menuBody.classList.toggle('active');
   });
