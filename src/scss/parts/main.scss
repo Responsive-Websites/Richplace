@@ -5,6 +5,10 @@
   }
   &__emotions {
   }
+  &__collection {
+  }
+  &__services {
+  }
 }
 
 .main-screen {
@@ -314,5 +318,258 @@
     @media screen and (max-width: 481px) {
       font-size: 14px;
     }
+  }
+}
+
+.collection {
+  &__body {
+    display: flex;
+    @media screen and (max-width: 1380px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+    @media screen and (max-width: 1380px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__block {
+    padding-bottom: 140%;
+    @media screen and (max-width: 1380px) {
+      padding-bottom: 40%;
+    }
+    @media screen and (max-width: 551px) {
+      padding-bottom: 50%;
+    }
+  }
+}
+.card-block {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__item {
+  }
+
+  &__icon {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    padding-top: 66px;
+    @media screen and (max-width: 1380px) {
+      padding-top: 0;
+      top: 0;
+      align-items: center;
+    }
+  }
+  &__icon-parts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    & span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 24px;
+      font-family: 'Playfair Display';
+      text-transform: uppercase;
+      color: #ffffff;
+
+      @media screen and (max-width: 761px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 551px) {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-width: 1262px) {
+      max-width: 250px;
+      & img {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 1262px) {
+      max-width: 250px;
+      & img {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 761px) {
+      max-width: 150px;
+      & img {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 551px) {
+      max-width: 120px;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  &__prefixes {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    padding-top: 406px;
+    @media screen and (max-width: 1380px) {
+      padding-top: 0;
+      display: none;
+    }
+  }
+
+  &__prefix {
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 1380px) {
+      & {
+        filter: brightness(0.7);
+      }
+    }
+  }
+}
+.prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 5px 10px;
+
+  &__icon {
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      width: 14px;
+    }
+  }
+
+  &__value {
+    text-transform: uppercase;
+    color: #590c0c;
+    font-size: 14px;
+
+    &_white {
+      color: #ffffff;
+    }
+  }
+}
+.prefix_brown {
+  background-color: #590c0c;
+}
+.icon-book {
+  padding-top: 0px;
+}
+
+.services {
+  &__body {
+    display: flex;
+
+    @media screen and (max-width: 924px) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    &:last-child {
+      flex: 0 1 44.071429%;
+    }
+    &:first-child {
+      flex: 0 1 56%;
+    }
+    @media screen and (max-width: 924px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__content {
+    padding: 40px;
+    @media screen and (max-width: 1156px) {
+      padding: 20px;
+    }
+  }
+
+  &__icon {
+    text-align: center;
+    margin-bottom: 27px;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    margin-bottom: 33px;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+
+  &__data {
+    display: flex;
+
+    @media screen and (max-width: 1447px) {
+      flex-wrap: wrap;
+      row-gap: 40px;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 924px) {
+      padding-bottom: 40%;
+    }
+  }
+}
+.data-services {
+  &__item {
+    padding-right: 30px;
+    @media screen and (max-width: 1447px) {
+      flex: 1 1 50%;
+    }
+    @media screen and (max-width: 480px) {
+      flex: 1 1 100%;
+      padding-right: 0px;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
